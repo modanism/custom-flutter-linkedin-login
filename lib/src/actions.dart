@@ -3,13 +3,14 @@ import 'package:linkedin_login/linkedin_login.dart';
 
 @immutable
 class UserSucceededAction extends LinkedAction {
-  const UserSucceededAction(this.user);
+  const UserSucceededAction(this.user, this.token);
 
   final LinkedInUserModel user;
+  final AuthorizationCodeResponse token;
 
   @override
   String toString() {
-    return 'UserSucceededAction{user: $user}';
+    return 'UserSucceededAction{user: $user, token: $token}';
   }
 }
 

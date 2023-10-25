@@ -15,7 +15,7 @@ class ClientFetcher {
     try {
       final token = await _fetchAccessTokenUser();
       final user = await _fetchLinkedInProfile(token.accessToken!);
-      return UserSucceededAction(user);
+      return UserSucceededAction(user, token);
 
       // return UserSucceededAction(LinkedInUserModel(
       //     firstName: LinkedInPersonalInfo(),
